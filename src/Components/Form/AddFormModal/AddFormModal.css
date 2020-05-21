@@ -1,0 +1,79 @@
+#close{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    height: 1rem;
+    width: 1rem;
+    cursor: pointer;
+}
+#close:hover{
+    background-color: red;
+
+}
+.AddStockForm h1{
+    margin-top: 2rem;
+    
+}
+#addStock{
+    margin-top: 2rem;
+    height: 55vh;
+    width: 100%;
+    text-align: left;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+    
+    
+}
+#f1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1.5rem 2rem 2rem;
+ }
+input{
+width: 18vw;
+height:5vh;
+border-radius: 2px;
+font-size: 1rem;
+}
+
+.AddButton{
+    height: 30px;
+    width: 50px;
+    position: absolute;
+    bottom: 100;
+    background-color: gray;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+.AddButton:hover{
+    background-color: green;
+    color: black;
+}
+
+@media only screen and (max-width: 480px){
+    .AddStockForm{
+        font-size: 0.2rem;
+        overflow-x: auto;
+        
+    }
+    input{
+        font-size: 0.7rem;
+    }
+    
+
+}
+@media only screen and (min-width: 481px) and (max-width: 768px){
+    .AddStockForm{
+        font-size: 0.2rem;
+        overflow-x: auto;
+        
+    }
+        
+   }

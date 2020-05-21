@@ -1,0 +1,132 @@
+h1,h2{
+    font-family:   Helvetica;
+    margin-top: 3rem;
+    margin-left: 4rem;
+}
+.MyStocksTable{
+    margin-top: 2rem;
+    margin-left: 4rem;
+    width: 90vw;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+}
+td,th{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 0.5rem;
+}
+.table_res{
+ overflow-x:auto;
+}
+.heading_row{
+    background-color: blueviolet;
+    text-align: center;
+    color: white;
+}
+tr:nth-of-type(even ){
+    background-color: #dddddd;
+  }
+
+  .StopTrackingBtn{
+      margin-left: 50px;
+      background-color: red;
+      color: white;
+      border-radius: 7px;
+      height: 30px;
+      width: 150px;
+      cursor: pointer;
+      
+  }
+
+  @media only screen and (max-width: 480px){
+    
+    h1,h2{
+        font-size: 1.5rem;
+        margin-left: 2rem;
+    }
+
+}
+@media only screen and (min-width: 481px) and (max-width: 768px){
+         h1{
+            font-size: 32px;
+            margin-left: 2rem;
+        }
+   }
+
+   h2{
+    font-family:   Helvetica;
+    
+ }
+ .msg{
+     
+     text-align: center;
+     color: red;
+     font-size: larger;
+ }
+
+    #companyList{
+        margin-left: 4rem;
+        margin-top: 2rem;
+        width: 90vw;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap:1rem;
+        list-style-type: none;
+    }
+
+    @media only screen and (max-width: 480px){
+    
+        h2{
+            font-size: 1.5rem;
+        }
+        #companyList{
+            margin-left: 2rem;
+            margin-top: 1rem;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            
+        }
+        .companyText{
+            display: block;
+            margin-left: 0rem;
+            font-family: 'Lucida Sans';
+         }
+         .msg{
+     
+            
+            font-size: small;
+        }
+    
+    }
+    @media only screen and (min-width: 481px) and (max-width: 768px){
+            h2{
+                font-family:   Helvetica;
+                font-size: 1.5rem;
+                margin-left: 2rem;
+            }
+             
+            #companyList{
+                margin-left: 2rem;
+                margin-top: 1rem;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                
+            }
+            .companyText{
+                display: block;
+                margin-left: 0rem;
+                font-family: 'Lucida Sans';
+             }
+             .msg{
+                 font-size: medium;
+            }
+       }
+       @media only screen and (min-width: 769px) and (max-width: 1200px)
+       {
+        .companyText{
+            display: block;
+            margin-left: 0rem;
+            font-family: 'Lucida Sans';
+         }
+
+       }

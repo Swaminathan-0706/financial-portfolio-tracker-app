@@ -1,0 +1,98 @@
+h2{
+    font-family:   Helvetica;
+    
+ }
+ .msg{
+     
+     text-align: center;
+     color: red;
+     font-size: larger;
+ }
+
+    #companyList{
+        margin-left: 4rem;
+        margin-top: 2rem;
+        width: 90vw;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap:1rem;
+        list-style-type: none;
+    }
+    
+    .StockButton
+    {
+        height: 2.5rem;
+        width:6rem;
+        border-radius: 5px;
+        background-color: white;
+        font-size: 20px;
+        cursor: pointer;
+        
+        }
+        .StockButton:hover{
+            background-color: rgb(47, 43, 43);
+            color: aliceblue;
+            
+
+        }
+    .companyText{
+       margin-left: 0.6rem;
+       font-family: 'Lucida Sans';
+    }
+
+    @media only screen and (max-width: 480px){
+    
+        h2{
+            font-size: 1.5rem;
+        }
+        #companyList{
+            margin-left: 2rem;
+            margin-top: 1rem;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            
+        }
+        .companyText{
+            display: block;
+            margin-left: 0rem;
+            font-family: 'Lucida Sans';
+         }
+         .msg{
+     
+            
+            font-size: small;
+        }
+    
+    }
+    @media only screen and (min-width: 481px) and (max-width: 768px){
+            h2{
+                font-family:   Helvetica;
+                font-size: 1.5rem;
+                margin-left: 2rem;
+            }
+             
+            #companyList{
+                margin-left: 2rem;
+                margin-top: 1rem;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                
+            }
+            .companyText{
+                display: block;
+                margin-left: 0rem;
+                font-family: 'Lucida Sans';
+             }
+             .msg{
+                 font-size: medium;
+            }
+       }
+       @media only screen and (min-width: 769px) and (max-width: 1200px)
+       {
+        .companyText{
+            display: block;
+            margin-left: 0rem;
+            font-family: 'Lucida Sans';
+         }
+
+       }
