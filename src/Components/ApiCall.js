@@ -22,10 +22,10 @@ class ApiCall extends Component {
              let dateMinus=dt.getDate();
              dateMinus=dateMinus.toString().padStart(2,'0');
              let date="";           
-             //Condition to Check for Weekends 
-             if(day===0||day===6)
+             //Condition to Check for Weekends and US time equivalent to India
+             if(day===0||day===6 || day===1 ||day ===2)
              {   
-             dateMinus=dateMinus-2;
+             dateMinus=dateMinus-4;
              date=`${dt.getFullYear().toString().padStart(4, '0')}-${(dt.getMonth()+1).toString().padStart(2, '0')}-${dateMinus}`;
              }
              else
@@ -42,6 +42,7 @@ class ApiCall extends Component {
                     livePrice : live,
                     proLoss:diff
                  });
+                 
             })
             .catch((error)=>{
                 console.log(error.response);
