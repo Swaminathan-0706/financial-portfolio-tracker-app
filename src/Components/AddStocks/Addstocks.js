@@ -13,7 +13,6 @@ class Addstocks extends Component {
              companyName:this.props.companyName,
              companySymbol:this.props.companySymbol
         }
-        console.log(props);
         
     }
     //This will update the props in child whenever state changes in parent.
@@ -69,7 +68,7 @@ class Addstocks extends Component {
                 </ul>
                 :<div >{showMessage}</div>
                 :<h1>Loading...</h1>}
-                }
+                
 
                 {(this.state.showModal)?
                 <AddFormModal

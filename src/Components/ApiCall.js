@@ -17,25 +17,13 @@ class ApiCall extends Component {
         let buy =buyprice;
         let sh = share;
         const apikey="8ITBD22C4L2XEYPM";
-             const dt=new Date();
-             const day=dt.getDay();
-             let dateMinus=dt.getDate();
-             dateMinus=dateMinus.toString().padStart(2,'0');
-             let date="";           
-             //Condition to Check for Weekends and US time equivalent to India
-             if(day===0||day===6 || day===1 ||day ===2)
-             {   
-             dateMinus=dateMinus-4;
-             date=`${dt.getFullYear().toString().padStart(4, '0')}-${(dt.getMonth()+1).toString().padStart(2, '0')}-${dateMinus}`;
-             }
-             else
-             {
-            date=`${dt.getFullYear().toString().padStart(4, '0')}-${(dt.getMonth()+1).toString().padStart(2, '0')}-${dateMinus-1}`;   
-             }
-            const api_url=`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${sym}&apikey=${apikey}`;
+        const api_url=`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${sym}&apikey=${apikey}`;
             axios.get(api_url)
             .then((response)=>{
-                let live = response.data['Time Series (Daily)'][date]['4. close'];
+                let lastRefreshed=response.data['Meta Data']["3. Last Refreshed"];
+                let date=lastRefreshed.substring(0,10);
+                console.log("final",date)
+                let live = response.data['Time Series (Daily)'][date]["4. close"];
                 let diff = ((live - buy)*sh);
                 diff=diff.toFixed(2);
                 this.setState({
